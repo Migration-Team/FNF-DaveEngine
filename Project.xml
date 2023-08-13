@@ -47,7 +47,7 @@
 	<define name="CRASH_HANDLER" if="desktop release" />
 	<define name="VIDEOS_ALLOWED" if="desktop || android" unless="32bits"/>
 	<define name="SHADERS_ENABLED" unless="mac"/>
-	<define name="HSCRIPT_ALLOWED"/>
+	<define name="HSCRIPT_ALLOWED" if ="desktop || android"/>
 	<define name="PRELOAD_ALL" unless="web" />
 	<define name="NO_PRELOAD_ALL" unless="PRELOAD_ALL"/>
 
@@ -68,6 +68,9 @@
 	<haxelib name="flixel" />
 	<haxedev set='webgl' if="web"/>
 	<haxelib name="flixel-addons" />
+	<haxelib name="hscript" />
+	<haxelib name="SScript" />
+	<define name="hscriptPos" />
 	<haxelib name="hscript-improved" if="HSCRIPT_ALLOWED" />
 	<define name="hscriptPos" if="HSCRIPT_ALLOWED" />
 	<haxelib name="flixel-ui" />
