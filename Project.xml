@@ -22,9 +22,9 @@
 	<!--macOS-->
 	<window if="mac" orientation="auto" fullscreen="false" resizable="true" vsync="false" allow-high-dpi="true" />
 
-	<!--Mobile-->
-	<window if="mobile" orientation="landscape" fullscreen="true" width="0" height="0" resizable="false"/>
-
+	<!--Mobile-specific-->
+	<window if="mobile" orientation="landscape" fullscreen="true" resizable="false" allow-shaders="true" require-shaders="true" allow-high-dpi="true" />
+	
 	<!-- _____________________________ Path Settings ____________________________ -->
 
 	<classpath name="source" />
@@ -77,7 +77,8 @@
 	<haxedef name="NAPE_RELEASE_BUILD" unless="debug" />
 	<haxelib name="hxcpp-debug-server" if="cpp debug"/>
 	<haxedef name="HXCPP_GC_SUMMARY" if="cpp debug"/>
-	<haxelib name="discord_rpc" if="desktop"/>
+	<haxelib name="discord_rpc" if="desktop || android"/>
+	<haxelib name="extension-androidtools" if="android" />
 	<haxelib name="flixel-screenshot-plugin" />
   
 	<haxedef name="HXCPP_CHECK_POINTER" />
@@ -89,6 +90,22 @@
 	<haxeflag name="--macro" value="allowPackage('flash')" />
 	<haxeflag name="--macro" value="include('my.pack')" />
 
+	<!--Always enable Null Object Reference check-->
+	<haxedef name="HXCPP_CHECK_POINTER" />
+	<haxedef name="HXCPP_STACK_LINE" />
+	<haxedef name="HXCPP_STACK_TRACE" />
+
+	<section if="android">
+		<config>
+			<!--Gradle-->
+			<android gradle-version="7.4.2" gradle-plugin="7.3.1" />
+
+			<!--Target SDK-->
+			<android target-sdk-version="29" if="${lime &lt; 8.1.0}" />
+		</config>
+	</section>
+
+	
 	<!-- _________________________________ Custom _______________________________ -->
 
 	<icon path="art/dave16.png" size='16'/>
