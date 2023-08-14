@@ -1,8 +1,8 @@
 package android;
 
-import android.flixel.FlxButton;
-import android.flixel.FlxHitbox;
-import android.flixel.FlxVirtualPad;
+import android.FlxButton;
+import android.FlxHitbox;
+import android.FlxVirtualPad;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxSubState;
