@@ -1,8 +1,8 @@
 package;
 
 #if android
-import android.flixel.FlxHitbox;
-import android.flixel.FlxVirtualPad;
+import android.FlxHitbox;
+import android.FlxVirtualPad;
 import flixel.FlxCamera;
 import flixel.input.actions.FlxActionInput;
 import flixel.util.FlxDestroyUtil;
