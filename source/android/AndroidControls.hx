@@ -28,7 +28,7 @@ class AndroidControls extends FlxSpriteGroup
 				virtualPad = new FlxVirtualPad(LEFT_FULL, NONE);
 				add(virtualPad);
 			case 'Pad-Custom':
-				virtualPad = MobileControls.getCustomMode(new FlxVirtualPad(RIGHT_FULL, NONE));
+				virtualPad = AndroidControls.getCustomMode(new FlxVirtualPad(RIGHT_FULL, NONE));
 				add(virtualPad);
 			case 'Pad-Duo':
 				virtualPad = new FlxVirtualPad(BOTH_FULL, NONE);
