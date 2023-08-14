@@ -1,4 +1,4 @@
-package mobile.flixel;
+package android.flixel;
 
 import flixel.FlxG;
 import flixel.graphics.FlxGraphic;
@@ -6,7 +6,7 @@ import flixel.graphics.frames.FlxTileFrames;
 import flixel.group.FlxSpriteGroup;
 import flixel.math.FlxPoint;
 import flixel.util.FlxDestroyUtil;
-import mobile.flixel.FlxButton;
+import android.flixel.FlxButton;
 import openfl.utils.Assets;
 
 enum FlxDPadMode
