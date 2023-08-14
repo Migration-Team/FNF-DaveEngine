@@ -10,7 +10,7 @@ import flixel.util.FlxDestroyUtil;
 /**
  * @author Mihai Alexandru (M.A. Jigsaw)
  */
-class MobileControls extends FlxSpriteGroup
+class AndroidControls extends FlxSpriteGroup
 {
 	public var virtualPad:FlxVirtualPad;
 	public var hitbox:FlxHitbox;
